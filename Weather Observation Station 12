@@ -1,0 +1,4 @@
+SELECT DISTINCT CITY
+FROM STATION
+WHERE PATINDEX('[AEIOU]%', CITY) = 0 -- Does not start with a vowel
+  AND PATINDEX('%[AEIOU]', CITY) = 0; -- Does not end with a vowel
